@@ -15,6 +15,7 @@ using LasmartTest.Data.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using LasmartTest.Services;
 
 namespace LasmartTest
 {
@@ -57,6 +58,8 @@ namespace LasmartTest
             services.AddDbContext<LasmartTestContext>(o => o.UseSqlServer(connectionString));
 
             services.AddTransient<LasmartTestSeeder>();
+
+            services.AddScoped<IEquipmentRepository, EquipmentRepository>();
 
         }
 

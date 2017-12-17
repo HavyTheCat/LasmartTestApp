@@ -16,7 +16,7 @@ namespace LasmartTest.Services
             _context = ctx;
         }
 
-        public async Task<bool> EquipmentrExists(Guid equipmentId)
+        public async Task<bool> EquipmentExists(Guid equipmentId)
         {
             return  await _context.Equipments.AnyAsync(e => e.Id == equipmentId);
         }
@@ -44,5 +44,6 @@ namespace LasmartTest.Services
         {
             return (await _context.SaveChangesAsync() >= 0);
         }
+
     }
 }

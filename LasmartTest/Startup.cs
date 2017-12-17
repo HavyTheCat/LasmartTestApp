@@ -84,12 +84,13 @@ namespace LasmartTest
                     });
                 });
             }
+            app.UseStaticFiles();
 
             app.UseMvc(cfg =>
             {
                 cfg.MapRoute("Default",
                     "{controller}/{action}/{id?}",
-                    new { Controller = "App", Action = "Index" });
+                    new { Controller = "App", Action = "index" });
             });
 
 

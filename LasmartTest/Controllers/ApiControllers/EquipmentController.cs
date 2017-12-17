@@ -1,6 +1,8 @@
 ﻿using LasmartTest.Data.Entities;
 using LasmartTest.Helpers;
 using LasmartTest.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,7 @@ using System.Threading.Tasks;
 namespace LasmartTest.Controllers.ApiControllers
 {   
     [Route("api/equipment")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class EquipmentController : Controller
     {
         private IEquipmentRepository _equipmentRepository;

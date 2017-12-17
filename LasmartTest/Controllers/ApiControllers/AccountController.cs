@@ -55,7 +55,7 @@ namespace LasmartTest.Controllers.ApiControllers
                     }
                     else
                     {
-                        RedirectToAction("Shop", "App");
+                        RedirectToAction("Index", "App");
                     }
                 }
             }

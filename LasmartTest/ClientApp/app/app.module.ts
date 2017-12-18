@@ -10,7 +10,7 @@ import { Login } from "./login/login.component"
 import { DataService } from "./shared/dataService"
 import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
-import { DataTableModule, InputTextareaModule, PanelModule, DropdownModule } from 'primeng';
+//import { DataTableModule, InputTextareaModule, PanelModule, DropdownModule } from 'primeng';
 
 
 let routes = [

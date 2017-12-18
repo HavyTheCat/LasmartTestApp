@@ -1,0 +1,18 @@
+﻿<nav class="navbar navbar-light bg-faded">
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="data.loginReqired">
+            Login
+        </button>
+        <div *ngIf="!data.loginReqired">{{data.user.firstName}} {{data.user.lastName}}</div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" *ngIf="data.loginReqired">
+            <login></login>
+        </div>
+
+    </div>
+</nav>
+
+<data-table-demo-2></data-table-demo-2>
+
+
